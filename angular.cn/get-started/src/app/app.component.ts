@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   msg = 'Hello world!';
+  add () {
+    this.msg += '.';
+  }
 }
