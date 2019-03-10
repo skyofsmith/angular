@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import {
   FormBuilder,
   FormGroup,
   Validators,
-  AbstractControl,
-} from '@angular/forms';
+  AbstractControl
+} from '@angular/forms'
 import skuValidator from './demo_form_with_custom_validations'
 @Component({
   selector: 'demo-form-sku-builder',
@@ -12,22 +12,26 @@ import skuValidator from './demo_form_with_custom_validations'
   styleUrls: ['./demo-form-sku-with-builder.component.css']
 })
 export class DemoFormSkuWithBuilderComponent {
+  myForm: FormGroup
 
-  myForm: FormGroup;
-  
-  // sku: AbstractControl;
+  sku: AbstractControl
 
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      'sku': ['', Validators.compose([
-        Validators.required])]
-        // skuValidator
-    });
-    // this.sku = this.myForm.controls['sku'];
+      sku: ['', Validators.compose([Validators.required])]
+      // skuValidator
+    })
+    this.sku = this.myForm.controls['sku']
+    // add event listenner on formControl or formGroup
+    this.sku.valueChanges.subscribe((value: string) => {
+      console.log('sku changed to:', value)
+    })
+    this.myForm.valueChanges.subscribe((form: any) => {
+      console.log('form changed to:', form)
+    })
   }
 
   onSubmit(value: string): void {
-    console.log('you submitted value: ', value);
+    console.log('you submitted value: ', value)
   }
-  
 }
