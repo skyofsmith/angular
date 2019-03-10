@@ -20,7 +20,8 @@ export class DemoFormSkuWithBuilderComponent {
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
       'sku': ['', Validators.compose([
-        Validators.required, skuValidator])]
+        Validators.required])]
+        // skuValidator
     });
     // this.sku = this.myForm.controls['sku'];
   }
