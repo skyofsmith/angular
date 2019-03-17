@@ -1,18 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
-
-import { AppComponent } from './app.component';
-
+import { HttpApp } from './app.component'
+import { Component } from '@angular/core'
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
+import { HttpModule } from '@angular/http';
+import { SimpleHttpComponent } from './simple-http/simple-http.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    HttpApp,
+    SimpleHttpComponent,
+    // SimpleHTTPComponent,
+    // MoreHTTPRequests,
+    // YouTubeSearchComponent,
+    // SearchBox,
+    // SearchResultComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule // <--- right here
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [HttpApp],
+  providers: [
+    // youTubeServiceInjectables
+    // http://jsonplaceholder.typicode.com
+  ]
 })
-export class AppModule { }
+export class HttpAppModule {}
