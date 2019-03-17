@@ -1,5 +1,4 @@
-import { Component } from '@angular/core'
-import { Http, Response, RequestOptions, Headers } from '@angular/http'
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +6,5 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app'
-  constructor(public http: Http) {}
-
-  makeRequest(): void {
-    
-  }
+  title = 'app';
 }

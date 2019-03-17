@@ -1,20 +1,18 @@
-import { Component } from '@angular/core'
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import { HttpModule } from '@angular/http'
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component'
+
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
-    BrowserModule,
-    HttpModule // <--- right here
+    BrowserModule
   ],
-  bootstrap: [AppComponent],
-  providers: []
+  providers: [],
+  bootstrap: [AppComponent]
 })
-class HttpAppModule {}
+export class AppModule { }
