@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core'
 import { HttpApp } from './app.component'
 import { Component } from '@angular/core'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http'
 import { SimpleHttpComponent } from './simple-http/simple-http.component'
-
+import { youTubeServiceInjectables } from './youtubeSearch/YouTubeSearchComponent'
 @NgModule({
   declarations: [
     HttpApp,
-    SimpleHttpComponent,
+    SimpleHttpComponent
     // SimpleHTTPComponent,
     // MoreHTTPRequests,
     // YouTubeSearchComponent,
